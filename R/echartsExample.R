@@ -93,7 +93,7 @@ echartsDependencies <- function() {
     htmltools::htmlDependency(
       "echartsWeb",
       "0.0.4",
-      system.file("htmlwidgets/plugins", package = "recharts"),
+      system.file("htmlwidgets/plugins", package = "recharts3"),
       script = c("bmap.js", "ecstat.js", "bmapAK.js")
     )
   )

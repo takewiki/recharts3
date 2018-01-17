@@ -72,7 +72,7 @@ eLiquid = function(percentDat, wave=3, radius = '80%',size = NULL,
                    toolbox = FALSE, toolbox.orient = "horizontal", toolbox.x = "right", toolbox.y = "top", 
                    dataView = TRUE, readOnly = FALSE, mark=TRUE, dataZoom=FALSE, magicType=TRUE,
                    tooltip = TRUE, tooltip.trigger="axis", tooltip.formatter="", 
-                   calculable=TRUE, showLabel=TRUE, opt = list()){
+                   calculable=TRUE, showLabel=TRUE, opt = list(),digit=2){
   if(percentDat > 1 ){
     percentDat = 1
     warning('percentDat should less than 1, set as 100%')
@@ -84,6 +84,7 @@ eLiquid = function(percentDat, wave=3, radius = '80%',size = NULL,
   }
   
   if(percentDat!=0){
+    percentDat=round(percentDat,digit)
     plotData = seq(percentDat, by=-percentDat/wave, length.out = wave)
   }
   opt = list()
@@ -110,7 +111,7 @@ eLiquid = function(percentDat, wave=3, radius = '80%',size = NULL,
   
   chart = htmlwidgets::createWidget(
     'echarts', opt,
-    package = 'recharts', width = size[1], height = size[2],
+    package = 'recharts3', width = size[1], height = size[2],
     preRenderHook = function(instance){
       instance
     }
@@ -123,7 +124,7 @@ eLiquid = function(percentDat, wave=3, radius = '80%',size = NULL,
                             htmltools::htmlDependency(
                               "eLiquid",
                               "1.0.5",
-                              system.file("htmlwidgets/plugins", package = "recharts"),
+                              system.file("htmlwidgets/plugins", package = "recharts3"),
                               script = "echarts-liquidfill.js"
                             )
                           ))

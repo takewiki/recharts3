@@ -193,7 +193,7 @@ ePie = function(dat, namevar=NULL, datavar=NULL, size = NULL,reset_radius = c(20
 	
 	### output list format
 	chart = htmlwidgets::createWidget(
-		'echarts', opt, width = size[1], height = size[2], package = 'recharts'
+		'echarts', opt, width = size[1], height = size[2], package = 'recharts3'
 	)
 	chart = .addClass(chart, "ePie")
 	chart

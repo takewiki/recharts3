@@ -59,7 +59,7 @@ eTimeline = function(..., timeLineName = NULL, width = NULL, height = NULL, curr
   
   chart = htmlwidgets::createWidget(
     'echarts', opt,
-    package = 'recharts', width = e1$size[1], height = e1$size[2],
+    package = 'recharts3', width = e1$size[1], height = e1$size[2],
     preRenderHook = function(instance) {
       instance
     }

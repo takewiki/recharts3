@@ -214,7 +214,7 @@ eLine = function(dat, xvar=NULL, yvar=NULL, series=NULL, size = NULL, horiz = FA
 	
 	chart = htmlwidgets::createWidget(
 		'echarts', opt,
-		package = 'recharts', width = size[1], height = size[2],
+		package = 'recharts3', width = size[1], height = size[2],
 		preRenderHook = function(instance) {
 			instance
 		}
@@ -433,7 +433,7 @@ eArea = function(dat, xvar=NULL, yvar=NULL, series=NULL, size = NULL, horiz = FA
 	
 	chart = htmlwidgets::createWidget(
 		'echarts', opt,
-		package = 'recharts', width = opt$size[1], height = opt$size[2],
+		package = 'recharts3', width = opt$size[1], height = opt$size[2],
 		preRenderHook = function(instance) {
 			instance
 		}

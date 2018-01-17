@@ -75,6 +75,7 @@
 #' @note You are recommended to use lazyPlot function for interactive chart
 #'   option set through "shiny" server.
 #' @export
+#' @include optSetUtils.R
 #' @examples require(plyr)
 #' 
 #' axisList = list(
@@ -111,9 +112,9 @@ eParallel = function(dat, series=NULL, axisList = list(), size = NULL, colorStyl
 	opt$theme = themeSet(theme = theme)
 	displayAxixName = colnames(dat)
 	if(is.null(series)){
-		opt$legend = recharts:::legendSet( show=FALSE, data=c(), legend.x=legend.x, legend.y=legend.y, orient=legend.orient)
+		opt$legend = recharts3:::legendSet( show=FALSE, data=c(), legend.x=legend.x, legend.y=legend.y, orient=legend.orient)
 	}else{
-		opt$legend = recharts:::legendSet( show=legend, data=levels(series), legend.x=legend.x, legend.y=legend.y, orient=legend.orient)
+		opt$legend = recharts3:::legendSet( show=legend, data=levels(series), legend.x=legend.x, legend.y=legend.y, orient=legend.orient)
 		# displayName should delete the groupName 
 		displayAxixName = displayAxixName[displayAxixName!="seriesName"]
 	}
@@ -226,7 +227,7 @@ eParallel = function(dat, series=NULL, axisList = list(), size = NULL, colorStyl
 
 	chart = htmlwidgets::createWidget(
 		'echarts', opt,
-		package = 'recharts', width = size[1], height = size[2],
+		package = 'recharts3', width = size[1], height = size[2],
 		preRenderHook = function(instance){
 			instance
 		}

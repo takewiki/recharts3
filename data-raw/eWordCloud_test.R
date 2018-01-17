@@ -1,0 +1,1 @@
+eWordcloud(wordFreqDf_chs, namevar = ~Word, datavar = ~Freq)

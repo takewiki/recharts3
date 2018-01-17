@@ -137,7 +137,7 @@ eWordcloud = function(dat, namevar=NULL, datavar=NULL,  size = c(1024, 768),
 
 	chart = htmlwidgets::createWidget(
 		'echarts', opt,
-		package = 'recharts', width = size[1], height = size[2],
+		package = 'recharts3', width = size[1], height = size[2],
 		preRenderHook = function(instance){
 			instance
 		}

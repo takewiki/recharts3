@@ -28,7 +28,7 @@ eBmap = function(center = c(104.114129, 37.550339), zoom = 5, roam = TRUE, mapSt
   
   chart = htmlwidgets::createWidget(
     'echarts', opt,
-    package = 'recharts', width = opt$size[1], height = opt$size[2],
+    package = 'recharts3', width = opt$size[1], height = opt$size[2],
     preRenderHook = function(instance) {
       instance
     }

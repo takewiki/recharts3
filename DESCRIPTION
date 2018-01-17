@@ -1,16 +1,17 @@
-Package: recharts
+Package: recharts3
 Type: Package
-Title: An R Interface to ECharts
-Version: 0.0.4
-Date: 2016-09-01
+Title: An R Interface to ECharts3.0
+Version: 1.0.1
+Date: 2018-02-04
 Authors@R: c(
     person("Taiyun", "Wei", role = c("aut", "cre"), email = "weitaiyun@gmail.com"),
     person("Yihui", "Xie", role = "aut"),
+    person("Lilei", "Hu", role = "aut"),
     person("Yang", "Zhou", role = "aut"),
     person("Baidu Inc", role = c("ctb", "cph"), comment = "the ECharts library under htmlwidgets/lib")
     )
 Maintainer: Yang Zhou <zhouyanga9@gmail.com>
-Description: Provides an R interface to the JavaScript library ECharts for
+Description: Provides an R interface to the JavaScript library ECharts 3.0 for
     interactive data visualization.
 Imports:
     htmltools,
@@ -24,4 +25,33 @@ Suggests:
 License: MIT + file LICENSE
 LazyData: TRUE
 VignetteBuilder: knitr
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
+Collate: 
+    'chartOpt.R'
+    'data.R'
+    'eBar.R'
+    'eBmap.R'
+    'eCandle.R'
+    'eForce.R'
+    'eFunnel.R'
+    'eLine.R'
+    'eLiquid.R'
+    'eMap.R'
+    'eMarkLine.R'
+    'eMarkPoint.R'
+    'optSetUtils.R'
+    'eParallel.R'
+    'ePie.R'
+    'ePlot.R'
+    'ePoints.R'
+    'eRadar.R'
+    'eSankey.R'
+    'eTimeLine.R'
+    'eWordcloud.R'
+    'echartsExample.R'
+    'lazyPlot.R'
+    'plot.recharts.R'
+    'saveREcharts.R'
+    'shiny.R'
+    'utils.R'
+    'zzz.R'

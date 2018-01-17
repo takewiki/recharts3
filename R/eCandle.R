@@ -139,7 +139,7 @@ eCandle = function(dat,  candleColor, size = NULL,
   
   chart = htmlwidgets::createWidget(
     'echarts', opt,
-    package = 'recharts', width = size[1], height = size[2],
+    package = 'recharts3', width = size[1], height = size[2],
     preRenderHook = function(instance){
       instance
     }

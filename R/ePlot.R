@@ -112,7 +112,7 @@ ePlot = function(series, ext = NULL, size = NULL,
 
   ### output list format
   chart = htmlwidgets::createWidget(
-    'echarts', opt, width = size[1], height = size[2], package = 'recharts',
+    'echarts', opt, width = size[1], height = size[2], package = 'recharts3',
     preRenderHook = function(instance) {
       instance
     }
