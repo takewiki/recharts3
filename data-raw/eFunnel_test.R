@@ -1,3 +1,4 @@
+library(recharts3)
 x = c("Exposure" = 100, "Click" = 80, "Visit" = 60, "Query"=40, "Buy"=20)
 eFunnel(x) +eTitle(title = "Funnel Plot")
 
